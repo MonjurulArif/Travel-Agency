@@ -1,0 +1,41 @@
+<?php 
+session_start();
+$pids = $_GET["name"];
+$_SESSION['packID'] = $pids;
+ ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reservation</title>
+    <meta name="viewport" content="width = device-width">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<form method="post" action="reservation.php">
+<div class="login-box">
+    <h1>reservation</h1>
+    <!--<div class="textbox">
+    	<input type="text" placeholder="Customer ID" name="C_ID"><br><br>
+    </div>
+    <div class="textbox">
+    	<input type="text" placeholder="Package ID" name="Pa_ID"><br><br>
+    </div>-->
+    <div class="textbox">
+        <input type="number" placeholder="Number of Adults" name="Num_Adult"><br><br>
+    </div>
+    <div class="textbox">
+        <input type="number" placeholder="Number of Childs" name="Num_Child"><br><br>
+    </div>
+    <div class="textbox">
+        <input type="date" placeholder="Deperture date" name="Dep_Date"><br><br>
+    </div>
+    <div class="textbox">
+        <input type="date" placeholder="Arrival date" name="Arr_Date"><br><br>
+    </div>
+        <!--<button name="pID" class="btn" type="Done" value="<?php $Pa_ID ?>">Done</button>-->
+		<input class= "btn" type="submit" value="Done">
+	</form>
+
+</body>
+</html>
